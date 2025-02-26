@@ -1,0 +1,12 @@
+GET  http://localhost:5212
+
+### LISTAR categoria
+GET  http://localhost:5212/api/categoria/listar
+
+### CADASTRAR categoria
+PUT  http://localhost:5212/api/categoria/cadastrar
+Content-Type: application/json
+
+{
+   "nome" : "Livros"
+}

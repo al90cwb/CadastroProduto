@@ -1,0 +1,46 @@
+GET  http://localhost:5212
+
+### LISTAR PRODUTOS
+GET  http://localhost:5212/api/produto/listar
+
+
+### CADASTRAR PRODUTO
+PUT  http://localhost:5212/api/produto/cadastrar
+Content-Type: application/json
+
+{
+   "nome" : "Produto 3",
+   "valor" : 2.20,
+   "quantidade" : 5,
+   "categoriaId" : 1   
+}
+
+
+### REMOVER PRODUTO
+DELETE  http://localhost:5212/api/produto/remover
+Content-Type: application/json
+
+{
+   "id": "2d335bc7-e393-42bf-b2b7-c07f2d94f25e"
+}
+
+
+### BUSCAR PRODUTO
+POST  http://localhost:55212/api/produto/buscar
+Content-Type: application/json
+
+{
+   "Id" : "2e9a4080-f09d-4628-9daf-49b6e3499c20"
+}
+
+
+### ALTERAR PRODUTO POR ID
+PUT  http://localhost:5212/api/produto/alterar
+Content-Type: application/json
+
+{
+   "Id" : "2e9a4080-f09d-4628-9daf-49b6e3499c20",
+   "nome" : "Teste",
+   "valor" : 5.8,
+   "quantidade" : 222
+}
