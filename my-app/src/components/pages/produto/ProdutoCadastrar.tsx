@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Produto } from '../../../models/Produto';
 import axios from 'axios';
+import { API_BASE_URL } from '../../../config';
+
 
 function ProdutoCadastrar() {
     
@@ -14,7 +16,7 @@ function ProdutoCadastrar() {
 
     //usando axios
     useEffect(()=> {
-        axios.get<any[]>("http://localhost:5212/api/categoria/listar")
+        axios.get<any[]>(`${API_BASE_URL}/api/categoria/listar`)
             .then(resposta => {
                 setCategorias(resposta.data);
             })
@@ -32,7 +34,7 @@ function ProdutoCadastrar() {
 
         //AXIOS - Biblioteca de Requisições HTTP facilita
 
-        fetch("http://localhost:5212/api/produto/cadastrar", {
+        fetch('${API_BASE_URL}/api/produto/cadastrar', {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(produto)

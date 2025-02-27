@@ -34,9 +34,11 @@ git clone https://github.com/al90cwb/CadastroProduto
    ```bash
    dotnet run
    ```
-
+--
 A API estará disponível no endereço padrão configurado (por exemplo, `http://localhost:5000`).
-
+my-app
+   --scr
+      --config.ts : export const API_BASE_URL = "http://localhost:5187"; inserir endereço
 ---
 
 ## **Configurar e Executar o Front-End**
