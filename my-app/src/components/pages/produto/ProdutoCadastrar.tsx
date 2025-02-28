@@ -34,6 +34,8 @@ function ProdutoCadastrar() {
 
         //AXIOS - Biblioteca de Requisições HTTP facilita
 
+
+
         fetch("http://localhost:5212/api/produto/cadastrar", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
@@ -44,8 +46,10 @@ function ProdutoCadastrar() {
                 console.log(produto);
             })
             .catch((erro) => {
+                console.log(produto);
                 console.error("Erro ao cadastrar produto:", erro);
             });
+
             
 
     }
@@ -88,14 +92,13 @@ function ProdutoCadastrar() {
                 </div>
 
 
-                <select  onChange={(event: any)=> console.log(event.target.value)}>
+                <select onChange={(event) => setCategoriaId(Number(event.target.value))}>
                     {categorias.map((categoria) => (
-                        <option value ={categoria.id} key={categoria.id}>
-                             {categoria.nome}
+                        <option value={categoria.id} key={categoria.id}>
+                            {categoria.nome}
                         </option>
                     ))}
                 </select>
-
 
                 <button type="submit">Cadastrar Produto</button>
             </form>
