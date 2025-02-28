@@ -54,6 +54,22 @@ app.MapPut("/api/categoria/cadastrar", ([FromBody] Categoria categoria,[FromServ
     return Results.Created("",categoria);
 });
 
+//DELETE: /api/categoria/remover
+app.MapDelete("/api/categoria/remover", ([FromBody] Categoria categoria, [FromServices] AppDataContext dataBasse) =>
+{
+    // Corrigindo a busca do produto pelo ID
+    var categoria_busca = dataBasse.Categorias.FirstOrDefault(p => p.Id == categoria.Id);
+    
+    if (categoria_busca == null)
+    {
+        return Results.NotFound();
+    }
+
+    dataBasse.Categorias.Remove(categoria_busca);
+    dataBasse.SaveChanges();
+    return Results.Ok();
+});
+
 
 
 //=================================PRODUTO

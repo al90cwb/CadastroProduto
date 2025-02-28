@@ -8,5 +8,13 @@ PUT  http://localhost:5212/api/categoria/cadastrar
 Content-Type: application/json
 
 {
-   "nome" : "Livros"
+   "nome" : "Utensilios"
+}
+
+### REMOVER categoria
+DELETE  http://localhost:5212/api/categoria/remover
+Content-Type: application/json
+
+{
+   "id": 3
 }
