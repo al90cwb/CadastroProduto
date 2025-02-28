@@ -11,7 +11,7 @@ function ProdutoListar(){
     }, []);
 
     const listarProdutos = async()=>{
-        fetch('${API_BASE_URL}/api/produto/listar')
+        fetch("http://localhost:5212/api/produto/listar")
             .then((resposta)=> resposta.json())
             .then((produtos)=> //console.table(produtos);
              setProdutos(produtos) );
