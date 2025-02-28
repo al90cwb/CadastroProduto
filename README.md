@@ -38,7 +38,7 @@ git clone https://github.com/al90cwb/CadastroProduto
 A API estará disponível no endereço padrão configurado (por exemplo, `http://localhost:5000`).
 my-app
    --scr
-      --config.ts : export const API_BASE_URL = "http://localhost:5187"; inserir endereço
+      --config.ts : export const API_BASE_URL = "http://localhost:5212"; inserir endereço
 ---
 
 ## **Configurar e Executar o Front-End**
@@ -69,8 +69,9 @@ Para finalizar, basta fechar os terminais onde a API e o front-end estão em exe
 ## **Contribuições**
 Contribuições são bem-vindas! Siga as etapas abaixo para colaborar:
 1. Faça um fork do repositório.
-2. Crie um branch para sua feature ou correção:
+2. Crie um branch a partir da branch epica, para sua feature ou correção:
    ```bash
+   git checkout epica
    git checkout -b minha-nova-feature
    ```
 3. Commit suas alterações:
